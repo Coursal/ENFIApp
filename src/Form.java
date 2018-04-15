@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 class Form
 {
@@ -39,7 +38,7 @@ class Form
         System.out.println("*****************************************");
     }
     
-    public void backup()                        ////method to log all the properties' information to a txt file named after the registration number of the applicant
+    public void backup()                        //method to log all the properties' information to a txt file named after the registration number of the applicant
     {
         String form_file=reg_num+".txt";
         
