@@ -1,3 +1,5 @@
+import java.io.*;
+
 class Field extends Property
 {
     private boolean in_house_dev;
@@ -41,12 +43,6 @@ class Field extends Property
     }
 
     @Override
-    public void save(String file)
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public double tax_calculation()
     {
         double property_tax;
@@ -57,6 +53,21 @@ class Field extends Property
             property_tax=0.3*getArea()+250;
 
 	return property_tax;	
+    }
+    
+    @Override
+    public void save(String file)
+    {
+        try
+        {
+            FileWriter writer = new FileWriter(file,true);
+            writer.write("F|" + getAddress() + "|" + getArea() + "|" + getYear_of_purchase() + "|" + in_house_dev + "|" + farmable + "\n");
+            writer.close(); 
+        }
+        catch(IOException ex)
+        {
+            ex.printStackTrace();
+        }
     }
     
     

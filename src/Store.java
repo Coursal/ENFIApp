@@ -1,3 +1,5 @@
+import java.io.*;
+
 class Store extends Property
 {
     private int location_level;      //1-5 value for the most valuable location
@@ -42,12 +44,6 @@ class Store extends Property
     }
 
     @Override
-    public void save(String file)
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public double tax_calculation()
     {
         double property_tax;
@@ -57,6 +53,20 @@ class Store extends Property
 	return property_tax;	
     }
     
+    @Override
+    public void save(String file)
+    {
+        try
+        {
+            FileWriter writer = new FileWriter(file,true);
+            writer.write("S|" + getAddress() + "|" + getArea() + "|" + getYear_of_purchase() + "|" + location_level + "\n");
+            writer.close();
+        }
+        catch(IOException ex)
+        {
+            ex.printStackTrace();
+        }
+    }
     
     //getters and setters
     public int getLocation_level()

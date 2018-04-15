@@ -25,8 +25,8 @@ abstract class Property
     
     //special methods for each type of property
     public abstract void display();
-    public abstract void save(String file);
     public abstract double tax_calculation();
+    public abstract void save(String file);     //method to log the property information to a txt file named after the registration number of the applicant
   
     
     //getters and setters

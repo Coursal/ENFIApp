@@ -34,11 +34,17 @@ class Form
         System.out.println("ENFIA: " + enfia);
         System.out.println();
         for(Property listed_property:property_list)
-        {
             listed_property.display();
-        }
         System.out.println();
         System.out.println("*****************************************");
+    }
+    
+    public void backup()                        ////method to log all the properties' information to a txt file named after the registration number of the applicant
+    {
+        String form_file=reg_num+".txt";
+        
+        for(Property listed_property:property_list)
+            listed_property.save(form_file);
     }
     
     public void enfia_sum()

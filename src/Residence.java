@@ -1,3 +1,5 @@
+import java.io.*;
+
 class Residence extends Property
 {
     private boolean flat;  
@@ -49,12 +51,6 @@ class Residence extends Property
     }
 
     @Override
-    public void save(String file)
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public double tax_calculation()
     {
         double property_tax;
@@ -65,6 +61,21 @@ class Residence extends Property
 		property_tax=1.3*getArea()+150;
 		
 	return property_tax;	
+    }
+    
+    @Override
+    public void save(String file)
+    {
+        try
+        {
+            FileWriter writer = new FileWriter(file,true);
+            writer.write("R|" + getAddress() + "|" + getArea() + "|" + getYear_of_purchase() + "|" + floor + "|" + flat + "\n");
+            writer.close();
+        }
+        catch(IOException ex)
+        {
+            ex.printStackTrace();
+        }
     }
     
     
