@@ -19,5 +19,7 @@ public class main
         f1.enfia_sum();
         f1.display();
         f1.backup();  
+        
+        GUI gui_instance = new GUI();
     }
 }
