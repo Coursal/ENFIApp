@@ -20,10 +20,6 @@ public class main
         f1.display();
         f1.backup();  
         
-<<<<<<< HEAD
-        GUI gui_instance = new GUI();       //initialization of the GUI
-=======
-        GUI gui_instance = new GUI(f1);
->>>>>>> 32eabd26048754d304fe6cfdf270183a883dbeb1
+        GUI gui_instance = new GUI();
     }
 }
