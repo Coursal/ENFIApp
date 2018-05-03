@@ -124,8 +124,7 @@ class GUI extends JFrame implements ActionListener
             insert_close.setAlignmentX(CENTER_ALIGNMENT);
             insert_close.setMaximumSize(new Dimension(Integer.MAX_VALUE, insert_close.getMinimumSize().height));        //fill the width of the window
             insert_close.addActionListener(this);
-  
-            
+        
             
             insert_page.add(insert_title);
             insert_page.add(year_label);
@@ -135,9 +134,6 @@ class GUI extends JFrame implements ActionListener
             insert_page.add(reg_num_text);
             insert_page.add(insert_button);
             insert_page.add(insert_close);
-            
-            
- 
        //////////////////////////////////////////////////////
        //////////////////////////////////////////////////////
        ////////////////////////////////////////////////////// 
@@ -203,8 +199,6 @@ class GUI extends JFrame implements ActionListener
         {
             frame.dispose();
         }
-        
-        
         
         
         frame.revalidate();
