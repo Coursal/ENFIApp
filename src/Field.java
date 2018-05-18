@@ -8,9 +8,8 @@ class Field extends Property
     //constructors
     public Field()
     {
-        setAddress("NULL");
-        setArea(-1);
-        setYear_of_purchase(-1);
+        super();
+        
 	in_house_dev=false;
         farmable=false;
         
@@ -19,9 +18,8 @@ class Field extends Property
     
     public Field(String ad, int ar, int yop, boolean i, boolean f)
     {
-        setAddress(ad);
-        setArea(ar);
-        setYear_of_purchase(yop);
+        super(ad, ar, yop);
+        
         in_house_dev=i;
         farmable=f;
         

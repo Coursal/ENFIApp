@@ -2,7 +2,7 @@ public class main
 {
     public static void main(String args[])
     {
-        Residence r = new Residence("Keratsiniou 54", 45, 1999, true, 1);
+        Residence r = new Residence("Telegrave Ave. 54", 45, 1999, true, 1);
         //r.display();
         
         Store s = new Store("St. Charles Ave. 354", 60, 2005, 5);

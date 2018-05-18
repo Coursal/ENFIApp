@@ -8,9 +8,8 @@ class Store extends Property
     //constructors
     public Store()
     {
-        setAddress("NULL");
-        setArea(-1);
-        setYear_of_purchase(-1);
+        super();
+        
 	location_level=-1;
         
         setTax(tax_calculation());
@@ -18,9 +17,7 @@ class Store extends Property
     
     public Store(String ad, int ar, int yop, int l)
     {
-        setAddress(ad);
-        setArea(ar);
-        setYear_of_purchase(yop);
+        super(ad, ar, yop);
         
         if(l<1 || l>5)              //in case of wrong location level input, auto-set it to 1
             location_level=1;

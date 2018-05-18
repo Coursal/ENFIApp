@@ -14,12 +14,11 @@ abstract class Property
         tax=-1;
     }
     
-    public Property(String ad, int ar, int yop, double t)
+    public Property(String ad, int ar, int yop)
     {
         address=ad;
         area=ar;
         year_of_purchase=yop;
-        tax=t;
     }
     
     

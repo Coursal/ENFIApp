@@ -9,20 +9,15 @@ class Residence extends Property
     //constructors
     public Residence()
     {
-        setAddress("NULL");
-        setArea(-1);
-        setYear_of_purchase(-1);
-	flat=false;
-	floor=-1;
+        super();
         
         setTax(tax_calculation());
     }
     
     public Residence(String ad, int ar, int yop, boolean fla, int flo)
     {
-        setAddress(ad);
-        setArea(ar);
-        setYear_of_purchase(yop);
+        super(ad, ar, yop);
+        
 	flat=fla;
 	floor=flo;
         
